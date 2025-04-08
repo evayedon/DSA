@@ -15,7 +15,8 @@ int main() {
     q.enqueue(30);
     q.enqueue(40);
     q.enqueue(50);
-
+    
+    cout << "Queue is full: " << (q.isFull() ? "Yes" : "No") << endl;
     cout << "Front element is: " << q.peek() << endl; 
 
     cout << "Dequeued: " << q.dequeue() << endl; 
@@ -26,6 +27,7 @@ int main() {
         cout << "Dequeued: " << q.dequeue() << endl;
     }
 
+    cout << "Queue is empty: " << (q.isEmpty() ? "Yes" : "No") << endl;
     
     cout  << endl;
     cout << "Start of linked queue operations" << endl;
