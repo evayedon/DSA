@@ -53,6 +53,23 @@ void HashT::isItemEqual(int key, int value)
     cout << "Item not found or not equal" << endl;
 }
 
+void HashT::insert(int key, int value)
+{
+    int index = key % tableSize;
+    HashNode *newNode = new HashNode{key, value, nullptr};
+    if (table[index] == nullptr)
+    {
+        table[index] = newNode; // Insert at empty index
+    }
+    else
+    {
+        HashNode *current = table[index];
+        while (current->next != nullptr)
+            current = current->next;
+        current->next = newNode; // Insert at end of linked list
+    }
+}
+
 int HashT::retrieve(int key)
 {
     int index = key % tableSize;

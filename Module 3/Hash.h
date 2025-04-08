@@ -10,6 +10,7 @@ class HashT
         void isItemEqual(int key, int value);
         int retrieve(int key);
         int remove(int key);
+        void insert(int key, int value);
         void print();
 
     private:
